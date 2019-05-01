@@ -45,14 +45,6 @@ func getJsonAsString() ([]byte, error) {
 	return js, err
 }
 
-func main2() {
-	json, err := getJsonAsString()
-	if err != nil {
-		log.Fatal(err)
-	}
-	log.Printf("json %s : ", json)
-}
-
 func main() {
 
 	fmt.Println("Initializing Rest server.....")
