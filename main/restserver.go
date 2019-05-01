@@ -55,7 +55,8 @@ func main() {
 			log.Fatal(err)
 		}
 		w.Header().Set("Content-Type", "application/json")
-		fmt.Fprintf(w, string(json))
+		w.Write(json)
+		//fmt.Fprintf(w, string(json))
 	})
 
 	http.ListenAndServe(":8080", nil)
